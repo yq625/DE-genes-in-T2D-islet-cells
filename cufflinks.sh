@@ -33,3 +33,4 @@ non_T2D/SRR3541510_sorted.bam,non_T2D/SRR3541566_sorted.bam,non_T2D/SRR3541570_s
 T2D/SRR3542251_sorted.bam,T2D/SRR3542272_sorted.bam,T2D/SRR3542279_sorted.bam,T2D/SRR3542295_s orted.bam,T2D/SRR3542301_sorted.bam,T2D/SRR3542315_sorted.bam,T2D/SRR3542332_sorted.bam,T2D/SR R3542346_sorted.bam,T2D/SRR3542527_sorted.bam,T2D/SRR3542572_sorted.bam,T2D/SRR3542687_sorted. bam,T2D/SRR3542723_sorted.bam
 
 #We got an output file containing all the results of analysis.
+#After obtaining the files with all the analysis data, we used CommeRbund in R to plot the scatter plot, volcano plot and so on to visualize our results. We also used this package to find out some significant genes between people with and without type 2 diabetes. (Codes are shown in CummeRbund_alpha.R and sig_genes_plot.R)
