@@ -1,6 +1,6 @@
 #We used the soted .bam files as out inputs and Cufflinks output .gtf files containing assembled isoforms by using a .gtf file of GRCh38 as the reference annotation
 
-#Cufflinks of .BAM Files of α Cells from People without Type 2 Diabetes
+#Cufflinks of .BAM Files of α Cells from People without Type 2 Diabetes:
 module load cufflinks/2.2.1 
 cd $SCRATCH 
 cd final-ag/alpha 
@@ -13,7 +13,7 @@ cufflinks -G \
 done
 
 #Cuffmerge (optional)
-#This is an optional procedure which merges together the input assemblies, enabling us to find some new exons, even the new genes. It used a .txt file which contains the path to all the transcript.gtf files produced by Cufflinks.
+#Cuffmerge merges together the input assemblies.
 #Codes for Cuffmerge of α Cells
 cuffmerge \ 
 -g \
@@ -22,7 +22,7 @@ cuffmerge \
 /genomics/genomes/Public/Vertebrate_mammalian/Homo_sapiens/Ensembl/GRCh38.p10/Homo_sapiens.GRC h38.dna.toplevel.fa \ 
 -o merged_alpha alpha_assemblies.txt
 
-#Cuffdiff is a software that we can use to find significant changes in RNA expression, splicing and promoter use. We separated our sorted .bam files into two groups based on the health condition respectively in each cell type. We used this software to see the significant difference between this two groups.
+#Cuffdiff is a software that we can use to find significant changes in RNA expression, splicing and promoter use.
 #Codes for Cuffdiff of α Cells
 cuffdiff -o diff_alpha -p 16 \ 
 -b \ 
